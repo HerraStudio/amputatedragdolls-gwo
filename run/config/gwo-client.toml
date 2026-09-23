@@ -1,0 +1,33 @@
+[render]
+	#Preload gun render resources after a gun is selected.
+	render_warmup = true
+	#Preload the currently held gun and installed attachments.
+	warmup_current_gun = true
+	#Predictively preload GWO weapons in the hotbar before they are selected.
+	warmup_hotbar_guns = true
+	#Preload optional attachments not currently installed. Disable this to reduce background work.
+	warmup_optional_attachments = false
+	#Preload gun and attachment sounds.
+	warmup_sounds = true
+	#Preload muzzle flash, smoke, shell, and tracer effect resources.
+	warmup_fx = true
+	#Render bullet tracers fired by the local player in first person.
+	first_person_bullet_tracer = true
+	#Delay in client ticks before predictive render warmup starts.
+	# Default: 0
+	# Range: 0 ~ 200
+	warmup_delay_ticks = 0
+	#Avoid full NBT copies on module-cache hits. Disabled by default after repeated A/B instability; restart required.
+	prepare_module_cache = false
+	#Read only the needed magazine root during visibility checks. Restart required.
+	prepare_magazine_root = true
+	#Reuse resolved animation sets by model and immutable definition identity. Restart required.
+	prepare_animation_cache = true
+	#Logical residency budget for predictively warmed weapons. Current and target weapons may exceed it.
+	# Default: 384
+	# Range: 64 ~ 2048
+	warmup_cache_budget_mb = 384
+	#Maximum render warmup time budget per frame in milliseconds.
+	# Default: 2.0
+	# Range: 0.1 ~ 10.0
+	warmup_budget_ms_per_frame = 2.0

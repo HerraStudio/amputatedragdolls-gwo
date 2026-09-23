@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'net.neoforged.moddev' version '2.0.91'
+}
+
+version = '1.2.0-neoforge-1.21.1'
+group = 'com.ymhmd.amputatedragdolls'
+base.archivesName = 'amputatedragdolls'
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = '21.1.251'
+    runs {
+        client { client() }
+        server { server(); programArgument '--nogui' }
+    }
+    mods {
+        amputatedragdolls { sourceSet(sourceSets.main) }
+    }
+}
+
+dependencies {
+    compileOnly files('libs/ragdollified-1.21.1-1.1.0.jar')
+    compileOnly files('libs/mobamputation-1.21.1-1.0.0.jar')
+    compileOnly files('libs/GWO-Beta1.0-Fix-0.4.jar')
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

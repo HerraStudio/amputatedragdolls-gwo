@@ -1,0 +1,7 @@
+enableGwoAmputation = true
+# Default: 0.75
+# Range: 0.0 ~ 1.0
+gwoHeadshotChance = 0.75
+# Default: 0.2
+# Range: 0.0 ~ 1.0
+gwoLimbChance = 0.2

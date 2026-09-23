@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.YMhmD.amputatedragdolls.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": ["GwoBulletMixin"],
+  "client": [
+    "AmputationBridgeMixin",
+    "ClientRagdollMixin",
+    "ClientRagdollRendererMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}
